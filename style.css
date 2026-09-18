@@ -2435,3 +2435,12 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 }
+/* =========================================================
+   EXPERIENCE - CLEAN TIMELINE
+   ========================================================= */
+
+.experience-main {
+    border: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+}
