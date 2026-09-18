@@ -1087,3 +1087,36 @@ footer a:hover {
         font-size: 32px;
     }
 }
+/* =========================================================
+   ABOUT CARDS - FINAL DESKTOP ALIGNMENT FIX
+   ========================================================= */
+
+.about-highlights {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+    width: 100%;
+    margin-top: 5px !important;
+}
+
+.about-highlights .highlight-item {
+    width: auto !important;
+    min-width: 0 !important;
+    min-height: 150px !important;
+    height: auto !important;
+    padding: 24px !important;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .about-highlights {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .about-highlights {
+        grid-template-columns: 1fr !important;
+    }
+}
