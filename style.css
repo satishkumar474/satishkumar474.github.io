@@ -1724,3 +1724,30 @@ footer a:hover {
         padding-top: 0;
     }
 }
+/* =========================================================
+   PROJECTS - FINAL SPACING
+   ========================================================= */
+
+#projects .section-header h2 {
+    max-width: 800px;
+}
+
+#projects .section-header {
+    margin-bottom: 42px;
+}
+
+#projects .projects-grid {
+    margin-top: 0;
+}
+
+@media (min-width: 1000px) {
+    #projects .section-header h2 {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 900px) {
+    #projects .section-header h2 {
+        white-space: normal;
+    }
+}
