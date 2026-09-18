@@ -1479,3 +1479,248 @@ footer a:hover {
         font-size: 14px;
     }
 }
+/* =========================================================
+   PROJECTS - PORTFOLIO
+   ========================================================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Project card */
+
+.project-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 390px;
+
+    padding: 30px;
+
+    background: var(--bg-card);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Top accent */
+
+.project-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+
+    background: var(--bg-card-hover);
+
+    border-color: var(--border-light);
+
+    box-shadow: var(--shadow);
+}
+
+.project-card:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* Project top row */
+
+.project-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 28px;
+}
+
+.project-number {
+    color: var(--primary);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.project-type {
+    padding: 6px 10px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 999px;
+
+    color: var(--text-muted);
+
+    font-size: 11px;
+}
+
+
+/* Project title */
+
+.project-card h3 {
+    margin-bottom: 14px;
+
+    color: var(--text);
+
+    font-size: 25px;
+
+    line-height: 1.3;
+}
+
+
+/* Project description */
+
+.project-card p {
+    color: var(--text-muted);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* Project technologies */
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 24px;
+}
+
+.project-tags span {
+    padding: 6px 10px;
+
+    background: rgba(110, 231, 255, 0.06);
+
+    border: 1px solid rgba(110, 231, 255, 0.15);
+
+    border-radius: 999px;
+
+    color: var(--primary);
+
+    font-size: 11px;
+}
+
+
+/* Case study link */
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    width: fit-content;
+
+    margin-top: auto;
+    padding-top: 28px;
+
+    color: var(--text);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        color 0.3s ease,
+        gap 0.3s ease;
+}
+
+.project-link span {
+    color: var(--primary);
+
+    font-size: 18px;
+
+    transition: transform 0.3s ease;
+}
+
+.project-link:hover {
+    color: var(--primary);
+}
+
+.project-link:hover span {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   PROJECTS - TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        min-height: 340px;
+    }
+}
+
+
+/* =========================================================
+   PROJECTS - MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .project-card {
+        min-height: auto;
+
+        padding: 25px;
+    }
+
+    .project-top {
+        margin-bottom: 22px;
+    }
+
+    .project-card h3 {
+        font-size: 21px;
+    }
+
+    .project-card p {
+        font-size: 14px;
+    }
+
+    .project-link {
+        margin-top: 25px;
+        padding-top: 0;
+    }
+}
