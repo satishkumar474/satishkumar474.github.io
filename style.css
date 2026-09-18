@@ -1301,3 +1301,181 @@ footer a:hover {
         bottom: 15px;
     }
 }
+/* =========================================================
+   SERVICES - PROFESSIONAL LAYOUT
+   ========================================================= */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Service card */
+
+.service-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 310px;
+
+    padding: 30px;
+
+    background: var(--bg-card);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Top accent line */
+
+.service-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+
+    background: var(--bg-card-hover);
+
+    border-color: var(--border-light);
+
+    box-shadow: var(--shadow);
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Number */
+
+.service-number {
+    margin-bottom: 24px;
+
+    color: var(--primary);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+/* Title */
+
+.service-card h3 {
+    margin-bottom: 14px;
+
+    color: var(--text);
+
+    font-size: 21px;
+
+    line-height: 1.35;
+}
+
+/* Description */
+
+.service-card p {
+    color: var(--text-muted);
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+/* Tags */
+
+.service-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: auto;
+    padding-top: 24px;
+}
+
+.service-tags span {
+    padding: 6px 9px;
+
+    background: rgba(110, 231, 255, 0.06);
+
+    border: 1px solid rgba(110, 231, 255, 0.15);
+
+    border-radius: 999px;
+
+    color: var(--primary);
+
+    font-size: 11px;
+}
+
+/* =========================
+   SERVICES - TABLET
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-card {
+        min-height: 290px;
+    }
+}
+
+/* =========================
+   SERVICES - MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: auto;
+        padding: 25px;
+    }
+
+    .service-number {
+        margin-bottom: 18px;
+    }
+
+    .service-card h3 {
+        font-size: 20px;
+    }
+
+    .service-card p {
+        font-size: 14px;
+    }
+}
