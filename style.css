@@ -1120,3 +1120,84 @@ footer a:hover {
         grid-template-columns: 1fr !important;
     }
 }
+/* =========================================================
+   ABOUT SECTION - FINAL ALIGNMENT
+   ========================================================= */
+
+.about-grid {
+    display: block;
+    width: 100%;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 70px;
+    row-gap: 28px;
+    width: 100%;
+}
+
+.about-content .section-text {
+    margin: 0;
+    color: var(--text-soft);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Third paragraph goes across the full width */
+.about-content .section-text:nth-child(3) {
+    grid-column: 1 / -1;
+    max-width: 900px;
+}
+
+/* Four highlight cards in one row */
+.about-highlight {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.about-highlight .highlight-item {
+    min-height: 150px;
+    height: auto;
+    padding: 24px;
+}
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .about-content {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 35px;
+    }
+
+    .about-highlight {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .about-content {
+        grid-template-columns: 1fr;
+        row-gap: 22px;
+    }
+
+    .about-content .section-text:nth-child(3) {
+        grid-column: auto;
+        max-width: 100%;
+    }
+
+    .about-highlight {
+        grid-template-columns: 1fr;
+    }
+}
