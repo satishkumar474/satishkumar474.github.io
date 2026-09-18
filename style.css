@@ -361,36 +361,39 @@ a {
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 70px;
+    column-gap: 70px;
+    row-gap: 28px;
     align-items: start;
-    margin-top: 10px;
 }
 
-.about-text {
-    max-width: 560px;
-}
-
-.about-text p {
+/* First and second paragraphs */
+.about-content > p:nth-of-type(1),
+.about-content > p:nth-of-type(2) {
     margin: 0;
     color: var(--text-soft);
     font-size: 16px;
-    line-height: 1.8;
+    line-height: 1.7;
 }
 
-.about-content > p {
+/* Third paragraph - full width */
+.about-content > p:nth-of-type(3) {
     grid-column: 1 / -1;
     max-width: 900px;
-    margin-top: 15px;
+    margin: 8px 0 0;
     color: var(--text-soft);
     font-size: 16px;
-    line-height: 1.8;
+    line-height: 1.7;
 }
 
+/* Highlight cards - full width */
 .about-highlights {
+    grid-column: 1 / -1;
+
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
-    margin-top: 35px;
+
+    margin-top: 5px;
 }
 
 .highlight-item {
@@ -429,33 +432,45 @@ a {
 
 
 /* =========================
-   ABOUT - MOBILE
+   ABOUT - TABLET
    ========================= */
 
 @media (max-width: 900px) {
 
     .about-content {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 35px;
+    }
+
+    .about-highlights {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   ABOUT - MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .about-content {
         grid-template-columns: 1fr;
-        gap: 25px;
+        row-gap: 22px;
     }
 
-    .about-text {
-        max-width: 100%;
-    }
-
-    .about-content > p {
+    .about-content > p:nth-of-type(3) {
         grid-column: auto;
         max-width: 100%;
         margin-top: 0;
     }
-}
-
-@media (max-width: 600px) {
 
     .about-highlights {
+        grid-column: auto;
         grid-template-columns: 1fr;
     }
 }
+
 /* =========================
    9. SERVICES
    ========================= */
