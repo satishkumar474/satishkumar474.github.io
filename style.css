@@ -2348,3 +2348,320 @@ footer a:hover {
   }
 
 }
+/* =========================================================
+   TRADING AUTOMATION
+   ========================================================= */
+
+#trading-automation {
+  overflow: hidden;
+}
+
+
+/* ---------------------------------------------------------
+   INTRO
+   --------------------------------------------------------- */
+
+#trading-automation .trading-intro {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+#trading-automation .trading-intro-content,
+#trading-automation .trading-markets {
+  border: 1px solid rgba(110, 231, 255, 0.12);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+#trading-automation .trading-intro-content {
+  padding: 30px;
+}
+
+#trading-automation .trading-badge {
+  display: inline-block;
+  padding: 6px 11px;
+  border-radius: 999px;
+  border: 1px solid rgba(110, 231, 255, 0.22);
+  color: #6ee7ff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+#trading-automation .trading-intro-content h3 {
+  margin: 16px 0 12px;
+  font-size: 26px;
+  color: #f5f7fb;
+}
+
+#trading-automation .trading-intro-content p {
+  margin: 0;
+  max-width: 720px;
+  color: #8fa3bd;
+  line-height: 1.75;
+}
+
+
+/* ---------------------------------------------------------
+   MARKETS
+   --------------------------------------------------------- */
+
+#trading-automation .trading-markets {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  overflow: hidden;
+}
+
+#trading-automation .trading-market {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 18px 24px;
+  background: rgba(255, 255, 255, 0.015);
+}
+
+#trading-automation .trading-market strong {
+  color: #f5f7fb;
+  font-size: 17px;
+}
+
+#trading-automation .trading-market span {
+  margin-top: 4px;
+  color: #7f94ad;
+  font-size: 12px;
+}
+
+
+/* ---------------------------------------------------------
+   TRADING FLOW
+   --------------------------------------------------------- */
+
+#trading-automation .trading-flow {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  padding: 22px;
+  margin-bottom: 50px;
+  border: 1px solid rgba(110, 231, 255, 0.12);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.018);
+  overflow-x: auto;
+}
+
+#trading-automation .trading-flow-item {
+  flex: 1 0 130px;
+  min-width: 130px;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+#trading-automation .trading-flow-item span {
+  display: block;
+  margin-bottom: 8px;
+  color: #6ee7ff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+#trading-automation .trading-flow-item strong {
+  display: block;
+  color: #f5f7fb;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+#trading-automation .trading-flow-item small {
+  display: block;
+  margin-top: 5px;
+  color: #7f94ad;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+#trading-automation .trading-flow-arrow {
+  display: flex;
+  align-items: center;
+  color: #6ee7ff;
+  font-size: 18px;
+}
+
+
+/* ---------------------------------------------------------
+   CAPABILITIES
+   --------------------------------------------------------- */
+
+#trading-automation .trading-capabilities-section {
+  margin-bottom: 50px;
+}
+
+#trading-automation .trading-capabilities-header {
+  margin-bottom: 20px;
+}
+
+#trading-automation .trading-capabilities-header h3 {
+  margin: 8px 0 0;
+  color: #f5f7fb;
+  font-size: 26px;
+}
+
+#trading-automation .trading-capabilities {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+#trading-automation .trading-capability {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 12px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.025);
+  transition: all 0.25s ease;
+}
+
+#trading-automation .trading-capability:hover {
+  border-color: rgba(110, 231, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+#trading-automation .trading-capability > span {
+  color: #6ee7ff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+#trading-automation .trading-capability strong {
+  color: #f5f7fb;
+  font-size: 14px;
+}
+
+#trading-automation .trading-capability p {
+  margin: 5px 0 0;
+  color: #7f94ad;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+
+/* ---------------------------------------------------------
+   CUSTOM ALGORITHM
+   --------------------------------------------------------- */
+
+#trading-automation .custom-algo-block {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 30px;
+  padding: 30px;
+  border: 1px solid rgba(110, 231, 255, 0.18);
+  border-radius: 20px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(110, 231, 255, 0.055),
+      rgba(124, 140, 255, 0.035)
+    );
+}
+
+#trading-automation .custom-algo-content h3 {
+  margin: 15px 0 12px;
+  color: #f5f7fb;
+  font-size: 25px;
+}
+
+#trading-automation .custom-algo-content p {
+  margin: 0;
+  color: #8fa3bd;
+  line-height: 1.7;
+}
+
+#trading-automation .custom-algo-steps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+#trading-automation .custom-algo-steps > div {
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+#trading-automation .custom-algo-steps span {
+  display: block;
+  margin-bottom: 7px;
+  color: #6ee7ff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+#trading-automation .custom-algo-steps strong {
+  display: block;
+  color: #f5f7fb;
+  font-size: 13px;
+}
+
+#trading-automation .custom-algo-steps small {
+  display: block;
+  margin-top: 4px;
+  color: #7f94ad;
+  font-size: 10px;
+}
+
+
+/* ---------------------------------------------------------
+   TABLET
+   --------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+  #trading-automation .trading-intro {
+    grid-template-columns: 1fr;
+  }
+
+  #trading-automation .custom-algo-block {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 650px) {
+
+  #trading-automation .trading-intro-content {
+    padding: 24px;
+  }
+
+  #trading-automation .trading-intro-content h3 {
+    font-size: 22px;
+  }
+
+  #trading-automation .trading-flow {
+    padding: 15px;
+    margin-bottom: 35px;
+  }
+
+  #trading-automation .trading-capabilities {
+    grid-template-columns: 1fr;
+  }
+
+  #trading-automation .custom-algo-block {
+    padding: 24px;
+  }
+
+  #trading-automation .custom-algo-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
