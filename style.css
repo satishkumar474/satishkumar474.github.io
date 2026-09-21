@@ -483,9 +483,9 @@ a {
 .services-grid {
     display: grid;
 
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
 
-    gap: 20px;
+    gap: 18px;
 
     width: 100%;
 }
@@ -604,6 +604,8 @@ a {
 /* Service cards - all seven use the same card size */
 .services-grid .service-card {
     min-height: 310px;
+    grid-column: auto;
+    grid-row: auto;
 }
 
 /*
