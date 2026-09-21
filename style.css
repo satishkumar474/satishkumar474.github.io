@@ -601,64 +601,83 @@ a {
     font-size: 11px;
 }
 
-/* Service 07 - featured but compact */
+/* Service cards - all seven use the same card size */
+.services-grid .service-card {
+    min-height: 310px;
+}
+
+/*
+   Service 07 is intentionally a normal service card.
+   It must not span the full row or use a different internal layout.
+*/
 .services-grid .service-card:last-child {
-    grid-column: 1 / -1;
+    grid-column: auto;
+    grid-row: auto;
 
-    min-height: 0;
+    display: flex;
+    flex-direction: column;
 
-    display: grid;
-    grid-template-columns: 56px minmax(0, 1fr);
+    min-height: 310px;
 
-    column-gap: 18px;
-    row-gap: 6px;
+    padding: 30px;
 
-    padding: 26px 30px;
-
-    border-color: rgba(110, 231, 255, 0.28);
+    border-color: var(--border);
 }
 
 .services-grid .service-card:last-child::before {
+    transform: scaleX(0);
+}
+
+.services-grid .service-card:last-child:hover::before {
     transform: scaleX(1);
 }
 
 .services-grid .service-card:last-child .service-number {
-    grid-column: 1;
-    grid-row: 1 / span 3;
+    grid-column: auto;
+    grid-row: auto;
 
-    margin: 0;
+    margin-bottom: 24px;
+}
+
+.services-grid .service-card:last-child h3,
+.services-grid .service-card:last-child p,
+.services-grid .service-card:last-child .service-tags {
+    grid-column: auto;
 }
 
 .services-grid .service-card:last-child h3 {
-    grid-column: 2;
-
-    margin: 0;
-
-    font-size: 21px;
+    margin-bottom: 14px;
 }
 
 .services-grid .service-card:last-child p {
-    grid-column: 2;
-
     margin: 0;
 }
 
 .services-grid .service-card:last-child .service-tags {
-    grid-column: 2;
-
-    margin: 0;
-    padding-top: 10px;
+    margin-top: auto;
+    padding-top: 24px;
 }
 
 /*
-   Fallback for Service 07 when it was placed outside
-   .services-grid in the HTML. This keeps it aligned
-   with the main content instead of stretching across
-   the entire browser window.
+   Safety override: if Service 06/07 were previously affected
+   by older nth/last-child rules, every direct service card
+   remains the same size and stays inside the 3-column grid.
+*/
+.services-grid > .service-card {
+    grid-column: auto;
+    grid-row: auto;
+    width: auto;
+}
+
+/*
+   Fallback for Service 07 if its HTML was accidentally placed
+   directly under #services instead of inside .services-grid.
+   Keep it the same width as a normal service card rather than
+   stretching across the browser.
 */
 #services > .service-card {
-    width: min(var(--container), 92%);
-    margin: 20px auto 0;
+    width: auto;
+    margin: 0;
 }
 
 /* =========================================================
@@ -1920,19 +1939,16 @@ footer a:hover {
         padding: 25px;
     }
 
+    .services-grid .service-card,
     .services-grid .service-card:last-child {
-        grid-column: 1;
-        display: flex;
-
-        padding: 25px;
-    }
-
-    .services-grid .service-card:last-child .service-number,
-    .services-grid .service-card:last-child h3,
-    .services-grid .service-card:last-child p,
-    .services-grid .service-card:last-child .service-tags {
         grid-column: auto;
         grid-row: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        min-height: auto;
+        padding: 25px;
     }
 
     .services-grid .service-card:last-child .service-number {
@@ -1940,7 +1956,8 @@ footer a:hover {
     }
 
     #services > .service-card {
-        width: 92%;
+        width: auto;
+        margin: 0;
     }
 
     .project-card {
