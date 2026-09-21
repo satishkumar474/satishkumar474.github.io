@@ -2112,3 +2112,123 @@ footer a:hover {
         font-size: 32px;
     }
 }
+/* =========================================================
+   FINAL SERVICES LAYOUT FIX
+   4 CARDS PER ROW - INCLUDING SERVICE 07
+   ========================================================= */
+
+#services .container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Section heading spans the complete row */
+#services .section-header {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+/* Remove the inner grid as a separate layout */
+#services .services-grid {
+    display: contents;
+}
+
+/* All service cards become items of the same 4-column grid */
+#services .service-card {
+    grid-column: auto !important;
+    grid-row: auto !important;
+
+    width: 100% !important;
+    min-height: 310px;
+
+    margin: 0 !important;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Service 07 gets exactly the same treatment */
+#services .container > .service-card {
+    grid-column: auto !important;
+}
+
+/* Remove previous special Service 07 styling */
+#services .service-card:last-child {
+    display: flex;
+
+    grid-column: auto !important;
+    grid-row: auto !important;
+
+    min-height: 310px;
+
+    padding: 30px;
+
+    border-color: var(--border);
+}
+
+#services .service-card:last-child .service-number {
+    grid-column: auto;
+    grid-row: auto;
+
+    margin-bottom: 24px;
+}
+
+#services .service-card:last-child h3,
+#services .service-card:last-child p,
+#services .service-card:last-child .service-tags {
+    grid-column: auto;
+}
+
+#services .service-card:last-child h3 {
+    margin-bottom: 14px;
+}
+
+#services .service-card:last-child p {
+    margin: 0;
+}
+
+#services .service-card:last-child .service-tags {
+    margin-top: auto;
+    padding-top: 24px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    #services .container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #services .section-header {
+        grid-column: 1 / -1;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    #services .container {
+        grid-template-columns: 1fr;
+    }
+
+    #services .section-header {
+        grid-column: 1;
+    }
+
+    #services .service-card,
+    #services .service-card:last-child {
+        grid-column: 1 !important;
+        min-height: auto;
+        padding: 25px;
+    }
+}
