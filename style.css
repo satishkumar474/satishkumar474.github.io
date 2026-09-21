@@ -3544,3 +3544,12 @@ footer a:hover {
     }
 
 }
+@media (min-width: 1001px) {
+
+    #home .hero-text h1 {
+        white-space: nowrap;
+        font-size: clamp(42px, 4.5vw, 64px);
+        letter-spacing: -2px;
+    }
+
+}
