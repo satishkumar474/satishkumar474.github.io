@@ -2815,3 +2815,62 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 }
+/* =========================================================
+   FEATURED SERVICE - ALGORITHMIC TRADING
+   ========================================================= */
+
+.services-grid .service-card:last-child {
+    grid-column: 1 / -1;
+
+    min-height: auto;
+
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    column-gap: 20px;
+    row-gap: 8px;
+
+    padding: 28px 30px;
+}
+
+.services-grid .service-card:last-child .service-number {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+}
+
+.services-grid .service-card:last-child h3 {
+    grid-column: 2;
+    margin: 0;
+}
+
+.services-grid .service-card:last-child p {
+    grid-column: 2;
+    margin: 4px 0 8px;
+}
+
+.services-grid .service-card:last-child .service-tags {
+    grid-column: 2;
+
+    margin-top: 0;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .services-grid .service-card:last-child {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .services-grid .service-card:last-child .service-number,
+    .services-grid .service-card:last-child h3,
+    .services-grid .service-card:last-child p,
+    .services-grid .service-card:last-child .service-tags {
+        grid-column: 1;
+    }
+
+    .services-grid .service-card:last-child .service-number {
+        grid-row: auto;
+    }
+}
