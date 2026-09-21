@@ -1,55 +1,42 @@
 /* =========================================================
    SATISH KUMAR — PERSONAL TECHNOLOGY WEBSITE
-   Premium Responsive Stylesheet (Trending Neon & Glassmorphism)
-========================================================= */
+   Optimized Premium Stylesheet (Neon, Glass & Spring Physics)
+   ========================================================= */
+
 :root {
-    /* Base Colors */
+    /* Base Colors & Layout */
     --bg: #080d16;
     --bg-2: #0b111d;
-    --bg-3: #0f1725;
-    --card: rgba(15, 23, 37, 0.78);
-    --card-strong: #101a2a;
     --text: #f6f9fc;
-    --text-soft: #c7d2e0;
     --text-muted: #8493a8;
-    
-    /* Original Theme Colors */
-    --cyan: #6ee7ff;
-    --cyan-2: #22c7e8;
-    --violet: #7c8cff;
-    --green: #70f1c8;
+    --container: 1180px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
 
-    /* NEW: Neon & Glassmorphism Variables */
+    /* Original Accents */
+    --cyan: #6ee7ff;
+    --violet: #7c8cff;
+
+    /* Premium Neon & Glass Variables */
     --neon-cyan: #00f3ff;
     --neon-purple: #9d4edd;
     --neon-blue: #3a86ff;
     --glass-bg: rgba(13, 20, 31, 0.55);
     --glass-border: rgba(0, 243, 255, 0.15);
     --glass-hover-border: rgba(0, 243, 255, 0.5);
-
-    /* Shadows & Glows */
-    --border: rgba(255,255,255,.09);
-    --border-cyan: rgba(110,231,255,.20);
-    --glow: rgba(110,231,255,.11);
-    --shadow: 0 24px 70px rgba(0,0,0,.32);
     --neon-shadow: 0 0 25px rgba(0, 243, 255, 0.15), inset 0 0 20px rgba(157, 78, 221, 0.05);
-    
-    /* Layout */
-    --container: 1180px;
-    --radius-sm: 10px;
-    --radius-md: 16px;
-    --radius-lg: 24px;
-    
-    /* NEW: Spring Physics Hover Animation */
-    --ease: 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    /* Motion */
+    --ease: 280ms cubic-bezier(.2,.7,.2,1);
+    --ease-spring: 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+/* =========================================================
+   1. GLOBALS & TYPOGRAPHY
+   ========================================================= */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 82px;
-}
+html { scroll-behavior: smooth; scroll-padding-top: 82px; }
 
 body {
     min-width: 320px;
@@ -59,138 +46,278 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
 }
 
-body::selection { background: rgba(0, 243, 255, 0.25); }
-::selection { background: rgba(0, 243, 255, 0.25); color: #fff; }
+::selection { background: rgba(0,243,255,.25); color: #fff; }
 a { color: inherit; text-decoration: none; }
 button, a { -webkit-tap-highlight-color: transparent; }
 
 .container {
     width: min(var(--container), calc(100% - 48px));
     margin-inline: auto;
-}
-
-/* =========================================================
-   GLOBAL BACKGROUND MESH & SECTION GLOWS
-========================================================= */
-.section {
     position: relative;
-    overflow: hidden;
-    padding: 112px 0;
-    background: var(--bg);
-    isolation: isolate;
+    z-index: 2;
 }
 
-.section.alternate { background: var(--bg-2); }
-
-.section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-    background-image:
-        radial-gradient(circle at 15% 50%, rgba(0, 243, 255, 0.04), transparent 25%),
-        radial-gradient(circle at 85% 30%, rgba(157, 78, 221, 0.04), transparent 25%);
-    animation: ambientMeshFloat 15s ease-in-out infinite alternate;
-    pointer-events: none;
-}
-
-@keyframes ambientMeshFloat {
-    0% { transform: scale(1) translate(0, 0); }
-    100% { transform: scale(1.1) translate(20px, -20px); }
-}
-
-/* =========================================================
-   FLOWING TEXT GRADIENTS (HEADERS)
-========================================================= */
-h1, h2, h3, .projects-header-main h2, .section-label {
+/* Flowing Text Gradients for Headers */
+h1, h2, h3, .section-title, .projects-header-main h2, .section-label {
     background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple), var(--neon-blue));
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: textGradientShift 6s linear infinite;
-    text-shadow: 0 0 30px rgba(0, 243, 255, 0.1);
+    text-shadow: 0 0 30px rgba(0,243,255,.1);
 }
 
-@keyframes textGradientShift {
-    to { background-position: 200% center; }
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
 }
+.section-label::before {
+    content: "";
+    width: 22px;
+    height: 1px;
+    background: var(--neon-cyan);
+    box-shadow: 0 0 12px rgba(0,243,255,.55);
+}
+
+.section-header { max-width: 850px; margin-bottom: 42px; }
+.section-header h2 { margin: 12px 0 16px; font-size: clamp(34px, 4vw, 52px); line-height: 1.08; letter-spacing: -1.8px; }
+.section-header p { color: var(--text-muted); font-size: 14px; line-height: 1.8; }
 
 /* =========================================================
-   GLASSMORPHISM CARDS WITH SPRING PHYSICS HOVER
-   (Applies globally to all modular cards across sections)
-========================================================= */
-.card,
-.project-card,
-.why-grid > div,
-.trading-flow-item,
-.approach-step,
-.project-subprojects {
-    background: var(--glass-bg) !important;
+   2. SHARED GLASSMORPHISM CARDS (The core optimization)
+   ========================================================= */
+.service-card, .project-card, .trading-flow-item, .trading-intro-content,
+.trading-markets, .trading-capabilities-section, .custom-algo-block,
+.experience-content, .independent-work, .case-study-card,
+.case-study-approach, .why-grid > div, .approach-step, .highlight-item {
+    position: relative;
+    background: var(--glass-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--glass-border) !important;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow);
-    
-    /* Spring Physics Transition */
-    transition: all var(--ease) !important;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 14px 40px rgba(0,0,0,.15);
+    transition: all var(--ease-spring);
+    overflow: hidden;
+    isolation: isolate;
 }
 
-.card:hover,
-.project-card:hover,
-.why-grid > div:hover,
-.trading-flow-item:hover,
-.approach-step:hover {
-    transform: translateY(-8px) scale(1.02) !important;
-    border-color: var(--glass-hover-border) !important;
-    box-shadow: 
-        0 30px 60px rgba(0,0,0,0.5),
-        var(--neon-shadow) !important;
+.service-card:hover, .project-card:hover, .trading-flow-item:hover, 
+.experience-content:hover, .case-study-card:hover, .why-grid > div:hover, 
+.approach-step:hover, .highlight-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: var(--glass-hover-border);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5), var(--neon-shadow);
     z-index: 10;
 }
 
-/* =========================================================
-   GLOWING NEON INDICATORS & NUMBERS
-========================================================= */
-.project-number,
-.trading-flow-item > span,
-.approach-step span,
-.icon-glow {
-    background: rgba(0, 243, 255, 0.1) !important;
-    border: 1px solid rgba(0, 243, 255, 0.3) !important;
-    color: var(--neon-cyan) !important;
+/* Shared Neon Markers (Numbers, Icons) */
+.project-number, .trading-flow-item > span, .approach-step span, .service-number, .case-study-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 243, 255, 0.1);
+    border: 1px solid rgba(0, 243, 255, 0.3);
+    color: var(--neon-cyan);
     box-shadow: 0 0 12px rgba(0, 243, 255, 0.2);
-    /* Prevents the text gradient from breaking small elements */
-    -webkit-text-fill-color: var(--neon-cyan); 
+    -webkit-text-fill-color: var(--neon-cyan);
+    font-weight: 800;
 }
 
 /* =========================================================
-   INNER PROJECT MODULES (Continuous Mask Gradient)
-========================================================= */
-.project-subproject {
+   3. BACKGROUNDS & LAYOUT
+   ========================================================= */
+.section {
     position: relative;
-    z-index: 1;
-    border: none !important;
-    transition: all var(--ease);
+    padding: 112px 0;
+    isolation: isolate;
+    background-color: var(--bg);
 }
+.section.alternate { background-color: var(--bg-2); }
 
-.project-subproject::before {
-    content: '';
+/* Animated Mesh Background */
+.section::before {
+    content: "";
     position: absolute;
     inset: 0;
-    border-radius: 9px;
-    padding: 1px;
-    background: linear-gradient(135deg, rgba(0,243,255,0), rgba(157,78,221,0));
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    transition: background var(--ease);
-    z-index: -1;
+    z-index: -5;
+    background-image:
+        radial-gradient(circle at 15% 50%, rgba(0,243,255,0.04), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(157,78,221,0.04), transparent 25%),
+        linear-gradient(rgba(0,243,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,243,255,.03) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 56px 56px, 56px 56px;
+    animation: ambientMeshFloat 15s ease-in-out infinite alternate;
+    pointer-events: none;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 
-.project-subproject:hover::before {
-    background: linear-gradient(135deg, rgba(0,243,255,0.6), rgba(157,78,221,0.6));
+/* Sweeping Light Line */
+.section > .container::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -18%;
+    width: 150px;
+    height: 1px;
+    pointer-events: none;
+    background: linear-gradient(90deg, transparent, rgba(0,243,255,.95), rgba(157,78,221,.45), transparent);
+    box-shadow: 0 0 16px rgba(0,243,255,.35);
+    animation: premiumLightSweep 8s ease-in-out infinite;
+}
+
+/* =========================================================
+   4. NAVIGATION & HERO
+   ========================================================= */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+    background: rgba(8,13,22,.78);
+    backdrop-filter: blur(18px);
+}
+.nav-container { min-height: 72px; display: flex; align-items: center; justify-content: space-between; }
+.logo { font-size: 21px; font-weight: 800; }
+.logo span { color: var(--neon-cyan); -webkit-text-fill-color: var(--neon-cyan); }
+.navbar nav { display: flex; gap: 5px; }
+.navbar nav a { padding: 10px 13px; color: #9cabc0; font-size: 12px; font-weight: 600; transition: all var(--ease); }
+.navbar nav a:hover { color: #fff; background: rgba(0,243,255,.1); }
+
+.hero {
+    min-height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.hero h1 { font-size: clamp(48px, 7vw, 86px); line-height: .98; letter-spacing: -4px; margin-bottom: 12px; }
+.hero h2 { font-size: clamp(27px, 3.5vw, 44px); line-height: 1.12; color: #eaf0f6; -webkit-text-fill-color: #eaf0f6; margin-bottom: 22px; }
+.hero-description { max-width: 690px; color: #91a0b4; font-size: 15px; }
+
+/* =========================================================
+   5. SPECIFIC GRID LAYOUTS
+   ========================================================= */
+.about-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 70px; align-items: stretch; }
+.services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.trading-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; padding: 10px 0; }
+.trading-capabilities, .approach-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 9px; }
+.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px; }
+.case-studies-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+
+/* =========================================================
+   6. INNER COMPONENT DETAILS
+   ========================================================= */
+/* Project Card Specifics */
+.project-card { padding: 24px; min-height: 560px; display: flex; flex-direction: column; }
+.project-top { display: flex; justify-content: space-between; margin-bottom: 22px; }
+.project-number { width: 34px; height: 34px; border-radius: 10px; font-size: 10px; }
+.project-card h3 { font-size: 22px; margin-bottom: 11px; }
+.project-card > p { color: #8798ac; font-size: 11px; margin-bottom: 16px; }
+
+/* Continuous Mask Gradient for Project Sub-modules */
+.project-subprojects { display: grid; gap: 6px; padding: 9px; }
+.project-subproject {
+    display: grid; grid-template-columns: 28px 1fr; gap: 8px; padding: 10px 8px;
+    position: relative; z-index: 1; border: none !important; transition: all var(--ease);
+}
+.project-subproject::before {
+    content: ''; position: absolute; inset: 0; border-radius: 9px; padding: 1px;
+    background: linear-gradient(135deg, rgba(0,243,255,0), rgba(157,78,221,0));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude; z-index: -1; transition: background var(--ease);
+}
+.project-subproject:hover::before { background: linear-gradient(135deg, rgba(0,243,255,0.6), rgba(157,78,221,0.6)); }
+.project-subproject > span { display: flex; justify-content: center; width: 22px; height: 22px; background: rgba(0,243,255,.1); border-radius: 7px; color: var(--neon-cyan); -webkit-text-fill-color: var(--neon-cyan); font-size: 8px; font-weight: 800; padding-top: 4px; }
+.project-subproject strong { color: #edf3f8; font-size: 10.5px; }
+.project-subproject small { color: #71859b; font-size: 8.5px; margin-top: 2px; }
+
+/* Trading Specifics */
+.trading-intro { display: grid; grid-template-columns: 1.35fr .65fr; gap: 24px; margin-bottom: 28px; }
+.trading-intro-content, .custom-algo-block, .trading-capabilities-section { padding: 28px; }
+.trading-flow-item { padding: 18px; min-height: 125px; display: flex; flex-direction: column; justify-content: center; overflow: visible; }
+.trading-flow-item > span { width: 26px; height: 26px; border-radius: 8px; font-size: 8px; margin-bottom: 10px; }
+.trading-flow-item strong { color: #edf4f8; font-size: 12px; }
+.trading-flow-item small { color: #7c90a5; font-size: 9px; margin-top: 6px; }
+.trading-flow-item::after {
+    position: absolute; color: rgba(0,243,255,.75); font-size: 18px; pointer-events: none; z-index: 4;
+}
+.trading-flow-item:nth-child(1)::after, .trading-flow-item:nth-child(2)::after, .trading-flow-item:nth-child(3)::after {
+    content: "→"; right: -18px; top: 50%; transform: translateY(-50%);
+}
+
+/* Other Sub-Grids */
+.service-card { padding: 22px; min-height: 285px; }
+.highlight-item { padding: 20px; min-height: 130px; }
+.why-grid > div { padding: 25px; min-height: 190px; }
+.approach-step { padding: 17px; min-height: 145px; }
+.approach-step span { width: 27px; height: 27px; border-radius: 8px; font-size: 8px; margin-bottom: 12px; }
+
+/* Tags */
+.service-tags, .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 20px; }
+.service-tags span, .project-tags span { padding: 6px 8px; border: 1px solid var(--glass-border); border-radius: 999px; background: rgba(0,243,255,.05); color: #8fd4e3; font-size: 8.5px; }
+
+/* Buttons */
+.btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 44px; padding: 0 18px; border-radius: 10px; font-size: 12px; font-weight: 700;
+    transition: all var(--ease); border: 1px solid var(--glass-border); background: rgba(0,243,255,.05); color: #fff;
+}
+.btn:hover { background: rgba(0,243,255,.2); box-shadow: 0 0 15px rgba(0,243,255,.3); transform: translateY(-2px); }
+
+/* =========================================================
+   7. KEYFRAMES
+   ========================================================= */
+@keyframes textGradientShift { to { background-position: 200% center; } }
+@keyframes ambientMeshFloat { 
+    0% { transform: scale(1) translate(0, 0); } 
+    100% { transform: scale(1.1) translate(20px, -20px); } 
+}
+@keyframes premiumLightSweep {
+    0% { left: -18%; opacity: 0; }
+    12% { opacity: .85; }
+    50% { opacity: 1; }
+    88% { opacity: .7; }
+    100% { left: 112%; opacity: 0; }
+}
+
+/* =========================================================
+   8. RESPONSIVE DESIGN
+   ========================================================= */
+@media (max-width: 1100px) {
+    .projects-grid, .trading-flow, .why-grid, .approach-steps, .trading-capabilities {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .container { width: min(100% - 36px, var(--container)); }
+    .about-grid, .trading-intro, .custom-algo-block { grid-template-columns: 1fr; }
+    .case-studies-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 700px) {
+    .projects-grid, .trading-flow, .why-grid, .approach-steps, .services-grid, .trading-capabilities {
+        grid-template-columns: 1fr;
+    }
+    .project-card, .service-card, .why-grid > div, .trading-flow-item { min-height: auto; }
+    .trading-flow-item::after { content: "↓" !important; left: 50% !important; right: auto !important; top: auto !important; bottom: -23px !important; transform: translateX(-50%) !important; }
+}
+
+@media (max-width: 640px) {
+    .hero h1 { font-size: clamp(42px, 14vw, 60px); }
+    .section { padding: 72px 0; }
+    .navbar nav { display: none; /* Consider adding a hamburger menu toggle for mobile */ } 
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
 }
