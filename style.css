@@ -2232,3 +2232,119 @@ footer a:hover {
         padding: 25px;
     }
 }
+/* =========================================================
+   PROJECTS - NEW PROJECT STRUCTURE
+   ========================================================= */
+
+#projects .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+#projects .project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+#projects .project-card > p {
+  margin-bottom: 20px;
+}
+
+/* Project sub-project list */
+#projects .project-subprojects {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 22px;
+}
+
+#projects .project-subproject {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  column-gap: 8px;
+  padding: 10px 11px;
+  border: 1px solid rgba(110, 231, 255, 0.10);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.025);
+  transition: all 0.25s ease;
+}
+
+#projects .project-subproject:hover {
+  border-color: rgba(110, 231, 255, 0.30);
+  background: rgba(110, 231, 255, 0.045);
+  transform: translateY(-1px);
+}
+
+/* Number */
+#projects .project-subproject > span {
+  grid-row: 1 / span 2;
+  color: #6ee7ff;
+  font-size: 12px;
+  font-weight: 700;
+  padding-top: 2px;
+}
+
+/* Subproject title */
+#projects .project-subproject strong {
+  display: block;
+  color: #f5f7fb;
+  font-size: 13px;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Subproject description */
+#projects .project-subproject small {
+  display: block;
+  color: #8fa3bd;
+  font-size: 11px;
+  line-height: 1.55;
+  margin-top: 3px;
+}
+
+/* Tags stay at bottom */
+#projects .project-tags {
+  margin-top: auto;
+  margin-bottom: 22px;
+}
+
+/* Project link */
+#projects .project-link {
+  margin-top: 0;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  #projects .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  #projects .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #projects .project-card {
+    padding: 24px;
+  }
+
+}
