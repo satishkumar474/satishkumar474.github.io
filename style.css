@@ -2061,26 +2061,20 @@ footer a:hover {
    EXPERIENCE
    ========================================================= */
 
-.experience-main {
-    margin-top: 10px;
-}
-
-
-/* =========================
-   EXPERIENCE TIMELINE
-   ========================= */
-
 .experience-timeline {
     position: relative;
-}
 
-.experience-item {
-    position: relative;
+    display: flex;
+    flex-direction: column;
 
-    display: grid;
-    grid-template-columns: 28px 1fr;
+    gap: 28px;
 
-    gap: 20px;
+    margin-top: 10px;
+
+    /* IMPORTANT: no outer border */
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
 }
 
 
@@ -2091,13 +2085,30 @@ footer a:hover {
 
     position: absolute;
 
-    top: 8px;
-    bottom: 8px;
+    top: 15px;
+    bottom: 15px;
     left: 13px;
 
     width: 1px;
 
     background: var(--border);
+
+    z-index: 0;
+}
+
+
+/* Experience item */
+
+.experience-item {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 28px minmax(0, 1fr);
+
+    gap: 20px;
+
+    z-index: 1;
 }
 
 
@@ -2116,7 +2127,7 @@ footer a:hover {
     width: 11px;
     height: 11px;
 
-    margin-top: 8px;
+    margin-top: 32px;
 
     background: var(--primary);
 
@@ -2128,12 +2139,12 @@ footer a:hover {
 }
 
 
-/* =========================
-   EXPERIENCE CONTENT
-   ========================= */
+/* =========================================================
+   EXPERIENCE CARD
+   ========================================================= */
 
 .experience-content {
-    padding: 30px;
+    padding: 32px;
 
     background: var(--bg-card);
 
@@ -2142,9 +2153,10 @@ footer a:hover {
     border-radius: var(--radius-lg);
 
     transition:
+        transform 0.3s ease,
         border-color 0.3s ease,
         background 0.3s ease,
-        transform 0.3s ease;
+        box-shadow 0.3s ease;
 }
 
 .experience-content:hover {
@@ -2153,10 +2165,12 @@ footer a:hover {
     background: var(--bg-card-hover);
 
     border-color: var(--border-light);
+
+    box-shadow: var(--shadow);
 }
 
 
-/* Top section */
+/* Header */
 
 .experience-top {
     display: flex;
@@ -2165,7 +2179,7 @@ footer a:hover {
 
     gap: 30px;
 
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .experience-period {
@@ -2186,7 +2200,7 @@ footer a:hover {
 
     color: var(--text);
 
-    font-size: 26px;
+    font-size: 27px;
 
     line-height: 1.3;
 }
@@ -2199,9 +2213,6 @@ footer a:hover {
     font-size: 16px;
     font-weight: 500;
 }
-
-
-/* Experience type */
 
 .experience-type {
     padding: 7px 11px;
@@ -2218,10 +2229,10 @@ footer a:hover {
 }
 
 
-/* Description */
+/* Summary */
 
-.experience-content > p {
-    max-width: 850px;
+.experience-summary {
+    max-width: 950px;
 
     color: var(--text-muted);
 
@@ -2231,19 +2242,72 @@ footer a:hover {
 }
 
 
-/* Tags */
+/* =========================================================
+   EXPERIENCE HIGHLIGHTS
+   ========================================================= */
 
-.experience-tags {
-    display: flex;
-    flex-wrap: wrap;
+.experience-highlights {
+    display: grid;
 
-    gap: 8px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    margin-top: 24px;
+    gap: 10px;
+
+    margin-top: 25px;
 }
 
-.experience-tags span {
-    padding: 6px 10px;
+.experience-highlight {
+    display: grid;
+
+    grid-template-columns: 25px 1fr;
+
+    gap: 10px;
+
+    padding: 15px;
+
+    background: rgba(110, 231, 255, 0.025);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-md);
+}
+
+.experience-highlight > span {
+    color: var(--primary);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.experience-highlight p {
+    margin: 0;
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   EXPERIENCE MODULES
+   ========================================================= */
+
+.experience-modules {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 25px;
+}
+
+.experience-modules span {
+    padding: 6px 9px;
 
     background: rgba(110, 231, 255, 0.06);
 
@@ -2253,7 +2317,7 @@ footer a:hover {
 
     color: var(--primary);
 
-    font-size: 11px;
+    font-size: 10px;
 }
 
 
@@ -2268,7 +2332,7 @@ footer a:hover {
 
     gap: 40px;
 
-    margin-top: 35px;
+    margin-top: 40px;
 
     padding: 35px;
 
@@ -2278,9 +2342,6 @@ footer a:hover {
 
     border-radius: var(--radius-lg);
 }
-
-
-/* Content */
 
 .independent-work-content h3 {
     margin-top: 9px;
@@ -2303,9 +2364,6 @@ footer a:hover {
 
     line-height: 1.8;
 }
-
-
-/* Work areas */
 
 .independent-work-areas {
     display: grid;
@@ -2332,8 +2390,8 @@ footer a:hover {
     border-radius: var(--radius-md);
 
     transition:
-        border-color 0.3s ease,
-        transform 0.3s ease;
+        transform 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .work-area:hover {
@@ -2347,8 +2405,6 @@ footer a:hover {
 
     font-size: 11px;
     font-weight: 700;
-
-    letter-spacing: 1px;
 }
 
 .work-area strong {
@@ -2359,31 +2415,29 @@ footer a:hover {
 
 
 /* =========================================================
-   EXPERIENCE - TABLET
+   TABLET
    ========================================================= */
 
 @media (max-width: 900px) {
 
-    .independent-work {
+    .experience-highlights {
         grid-template-columns: 1fr;
-
-        gap: 25px;
     }
 
-    .independent-work-content p {
-        max-width: 100%;
+    .independent-work {
+        grid-template-columns: 1fr;
     }
 }
 
 
 /* =========================================================
-   EXPERIENCE - MOBILE
+   MOBILE
    ========================================================= */
 
 @media (max-width: 600px) {
 
     .experience-item {
-        grid-template-columns: 18px 1fr;
+        grid-template-columns: 18px minmax(0, 1fr);
 
         gap: 12px;
     }
@@ -2396,7 +2450,7 @@ footer a:hover {
         width: 9px;
         height: 9px;
 
-        margin-top: 9px;
+        margin-top: 25px;
     }
 
     .experience-content {
@@ -2417,13 +2471,15 @@ footer a:hover {
         align-self: flex-start;
     }
 
-    .experience-content > p {
+    .experience-summary {
         font-size: 14px;
     }
 
-    .independent-work {
-        margin-top: 25px;
+    .experience-highlights {
+        grid-template-columns: 1fr;
+    }
 
+    .independent-work {
         padding: 22px;
     }
 
@@ -2434,13 +2490,4 @@ footer a:hover {
     .independent-work-areas {
         grid-template-columns: 1fr;
     }
-}
-/* =========================================================
-   EXPERIENCE - CLEAN TIMELINE
-   ========================================================= */
-
-.experience-main {
-    border: none !important;
-    padding: 0 !important;
-    background: transparent !important;
 }
