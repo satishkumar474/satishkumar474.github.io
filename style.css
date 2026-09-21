@@ -2491,3 +2491,327 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 }
+/* =========================================================
+   ALGORITHMIC TRADING - FEATURED SERVICE
+   ========================================================= */
+
+.services-grid .service-card:last-child {
+    border-color: rgba(110, 231, 255, 0.28);
+}
+
+.services-grid .service-card:last-child::before {
+    transform: scaleX(1);
+}
+
+.services-grid .service-card:last-child .service-number {
+    color: var(--primary);
+}
+/* =========================================================
+   ALGORITHMIC TRADING & MARKET AUTOMATION
+   ========================================================= */
+
+.trading-flow {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 14px;
+
+    margin-top: 45px;
+}
+
+.trading-flow-item {
+    padding: 22px;
+
+    background: var(--bg-card);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-md);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.trading-flow-item:hover {
+    transform: translateY(-4px);
+
+    background: var(--bg-card-hover);
+
+    border-color: var(--border-light);
+}
+
+.trading-flow-item > span {
+    color: var(--primary);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.trading-flow-item strong {
+    display: block;
+
+    margin-top: 12px;
+
+    color: var(--text);
+
+    font-size: 18px;
+}
+
+.trading-flow-item p {
+    margin-top: 8px;
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   TRADING CAPABILITIES
+   ========================================================= */
+
+.trading-capabilities {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-top: 25px;
+}
+
+.trading-capability {
+    padding: 28px;
+
+    background: var(--bg-card);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.trading-capability:hover {
+    transform: translateY(-5px);
+
+    background: var(--bg-card-hover);
+
+    border-color: var(--border-light);
+}
+
+.trading-capability-number {
+    color: var(--primary);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.trading-capability h3 {
+    margin-top: 12px;
+
+    color: var(--text);
+
+    font-size: 20px;
+}
+
+.trading-capability p {
+    margin-top: 10px;
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+.trading-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 20px;
+}
+
+.trading-tags span {
+    padding: 6px 9px;
+
+    background: rgba(110, 231, 255, 0.06);
+
+    border: 1px solid rgba(110, 231, 255, 0.15);
+
+    border-radius: 999px;
+
+    color: var(--primary);
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   CUSTOM ALGORITHM BLOCK
+   ========================================================= */
+
+.custom-algo-block {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+
+    align-items: center;
+
+    margin-top: 35px;
+
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(110, 231, 255, 0.05),
+            rgba(255, 255, 255, 0.015)
+        );
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+}
+
+.custom-algo-content h3 {
+    margin-top: 10px;
+
+    color: var(--text);
+
+    font-size: 28px;
+
+    line-height: 1.3;
+}
+
+.custom-algo-content p {
+    max-width: 620px;
+
+    margin-top: 12px;
+
+    color: var(--text-muted);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* Custom algorithm steps */
+
+.custom-algo-steps {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+.custom-algo-steps > div {
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 18px;
+
+    background: var(--bg-card);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-md);
+}
+
+.custom-algo-steps span {
+    color: var(--primary);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.custom-algo-steps strong {
+    margin-top: 8px;
+
+    color: var(--text);
+
+    font-size: 15px;
+}
+
+.custom-algo-steps small {
+    margin-top: 4px;
+
+    color: var(--text-muted);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   TRADING - TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .trading-flow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .trading-capabilities {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .custom-algo-block {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   TRADING - MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .trading-flow {
+        grid-template-columns: 1fr;
+    }
+
+    .trading-capabilities {
+        grid-template-columns: 1fr;
+    }
+
+    .trading-capability {
+        padding: 23px;
+    }
+
+    .custom-algo-block {
+        padding: 23px;
+    }
+
+    .custom-algo-content h3 {
+        font-size: 23px;
+    }
+
+    .custom-algo-steps {
+        grid-template-columns: 1fr;
+    }
+}
