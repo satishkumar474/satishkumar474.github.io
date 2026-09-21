@@ -4002,3 +4002,689 @@ footer a:hover {
     }
 
 }
+/* =========================================================
+   PREMIUM PROJECTS SECTION
+   ========================================================= */
+
+#projects.projects-premium {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+
+    background: #0b0f19;
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+   ========================================================= */
+
+#projects .projects-bg-grid {
+    position: absolute;
+    inset: 0;
+
+    z-index: -5;
+
+    background-image:
+        linear-gradient(
+            rgba(110, 231, 255, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(110, 231, 255, 0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 54px 54px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black 0%,
+            rgba(0, 0, 0, 0.8) 65%,
+            transparent 100%
+        );
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+   ========================================================= */
+
+#projects .projects-bg-glow {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    pointer-events: none;
+
+    z-index: -4;
+}
+
+#projects .projects-glow-left {
+    width: 420px;
+    height: 420px;
+
+    left: -180px;
+    top: 220px;
+
+    background: rgba(110, 231, 255, 0.07);
+}
+
+#projects .projects-glow-right {
+    width: 520px;
+    height: 520px;
+
+    right: -220px;
+    top: 40px;
+
+    background: rgba(45, 170, 255, 0.07);
+}
+
+
+/* =========================================================
+   ORBIT CIRCLES
+   ========================================================= */
+
+#projects .projects-orbit {
+    position: absolute;
+
+    border: 1px solid rgba(110, 231, 255, 0.09);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: -3;
+}
+
+#projects .projects-orbit-left {
+    width: 390px;
+    height: 390px;
+
+    left: -190px;
+    top: 210px;
+}
+
+#projects .projects-orbit-right {
+    width: 500px;
+    height: 500px;
+
+    right: -180px;
+    top: 30px;
+}
+
+#projects .projects-orbit-right::before,
+#projects .projects-orbit-right::after {
+    content: "";
+
+    position: absolute;
+
+    border: 1px solid rgba(110, 231, 255, 0.055);
+
+    border-radius: 50%;
+}
+
+#projects .projects-orbit-right::before {
+    inset: 55px;
+}
+
+#projects .projects-orbit-right::after {
+    inset: 115px;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+#projects .projects-container {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   PROJECT HEADER
+   ========================================================= */
+
+#projects .projects-header {
+    display: grid;
+
+    grid-template-columns: 1fr 230px;
+
+    gap: 50px;
+
+    align-items: end;
+
+    margin-bottom: 34px;
+}
+
+#projects .projects-header-main {
+    max-width: 850px;
+}
+
+#projects .projects-header-main h2 {
+    margin: 12px 0 16px;
+
+    color: #f5f7fb;
+
+    font-size: clamp(38px, 4vw, 58px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+}
+
+#projects .projects-header-main h2 span {
+    color: #6ee7ff;
+}
+
+#projects .projects-header-main p {
+    max-width: 760px;
+
+    margin: 0;
+
+    color: #8fa3bd;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   HEADER SIDE
+   ========================================================= */
+
+#projects .projects-header-side {
+    padding-bottom: 4px;
+}
+
+#projects .projects-header-side > span {
+    color: #6ee7ff;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+#projects .projects-header-line {
+    width: 30px;
+    height: 1px;
+
+    margin: 18px 0;
+
+    background: #6ee7ff;
+}
+
+#projects .projects-header-side p {
+    max-width: 180px;
+
+    margin: 0;
+
+    color: #7489a1;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   PROJECT GRID
+   ========================================================= */
+
+#projects .projects-premium-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 14px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   PREMIUM CARD
+   ========================================================= */
+
+#projects .project-premium-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    padding: 22px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(110, 231, 255, 0.13);
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(17, 29, 45, 0.92),
+            rgba(10, 17, 29, 0.94)
+        );
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.16);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Top accent */
+
+#projects .project-premium-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #6ee7ff,
+            #7c8cff,
+            transparent
+        );
+
+    opacity: 0.55;
+}
+
+
+/* Card hover */
+
+#projects .project-premium-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(110, 231, 255, 0.30);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.24),
+        0 0 35px rgba(110, 231, 255, 0.04);
+}
+
+
+/* =========================================================
+   CARD TOP
+   ========================================================= */
+
+#projects .project-card-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   PROJECT ICON
+   ========================================================= */
+
+#projects .project-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 54px;
+
+    width: 54px;
+    height: 54px;
+
+    border: 1px solid rgba(110, 231, 255, 0.16);
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(110, 231, 255, 0.10),
+            rgba(124, 140, 255, 0.04)
+        );
+
+    color: #6ee7ff;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+}
+
+
+/* =========================================================
+   CARD META
+   ========================================================= */
+
+#projects .project-card-meta {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+#projects .project-card-number {
+    color: #6ee7ff;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+#projects .project-card-category {
+    color: #91a7bf;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.1px;
+}
+
+
+/* =========================================================
+   CARD TITLE
+   ========================================================= */
+
+#projects .project-premium-card h3 {
+    margin: 0 0 10px;
+
+    color: #f5f7fb;
+
+    font-size: 23px;
+
+    line-height: 1.12;
+
+    letter-spacing: -0.6px;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+   ========================================================= */
+
+#projects .project-premium-description {
+    margin: 0 0 17px;
+
+    color: #8fa3bd;
+
+    font-size: 11px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   MODULE LIST
+   ========================================================= */
+
+#projects .project-module-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 10px;
+
+    border: 1px solid rgba(255, 255, 255, 0.055);
+
+    border-radius: 12px;
+
+    background: rgba(5, 10, 18, 0.30);
+}
+
+
+/* =========================================================
+   MODULE
+   ========================================================= */
+
+#projects .project-module {
+    display: grid;
+
+    grid-template-columns: 24px minmax(0, 1fr);
+
+    gap: 7px;
+
+    padding: 8px 7px;
+
+    border-radius: 8px;
+
+    transition:
+        background 0.2s ease;
+}
+
+#projects .project-module:hover {
+    background: rgba(110, 231, 255, 0.035);
+}
+
+#projects .project-module > span {
+    color: #6ee7ff;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    padding-top: 2px;
+}
+
+#projects .project-module strong {
+    display: block;
+
+    color: #edf3f9;
+
+    font-size: 10.5px;
+
+    line-height: 1.35;
+}
+
+#projects .project-module small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #71869e;
+
+    font-size: 8.5px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   TAGS
+   ========================================================= */
+
+#projects .project-premium-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 5px;
+
+    margin-top: auto;
+
+    padding-top: 18px;
+
+    margin-bottom: 18px;
+}
+
+#projects .project-premium-tags span {
+    padding: 6px 8px;
+
+    border: 1px solid rgba(110, 231, 255, 0.16);
+
+    border-radius: 999px;
+
+    background: rgba(110, 231, 255, 0.035);
+
+    color: #8fcfe0;
+
+    font-size: 8.5px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   LINK
+   ========================================================= */
+
+#projects .project-premium-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    width: fit-content;
+
+    color: #6ee7ff;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: gap 0.25s ease;
+}
+
+#projects .project-premium-link span {
+    font-size: 14px;
+}
+
+#projects .project-premium-link:hover {
+    gap: 11px;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   WATERMARK
+   ========================================================= */
+
+#projects .project-watermark {
+    position: absolute;
+
+    right: -8px;
+    bottom: -28px;
+
+    color: rgba(120, 150, 190, 0.07);
+
+    font-size: 105px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    pointer-events: none;
+
+    user-select: none;
+}
+
+
+/* =========================================================
+   TRADING CARD ACCENT
+   ========================================================= */
+
+#projects .project-trading {
+    border-color: rgba(110, 231, 255, 0.23);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(19, 40, 57, 0.95),
+            rgba(10, 18, 31, 0.95)
+        );
+}
+
+#projects .project-trading::before {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    #projects .projects-header {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #projects .projects-header-side {
+        display: none;
+    }
+
+    #projects .projects-premium-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    #projects .projects-premium-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #projects .projects-header-main h2 {
+        font-size: 36px;
+
+        letter-spacing: -1.3px;
+    }
+
+    #projects .project-premium-card {
+        padding: 20px;
+    }
+
+    #projects .project-premium-card h3 {
+        font-size: 21px;
+    }
+
+    #projects .projects-orbit-left {
+        left: -260px;
+    }
+
+    #projects .projects-orbit-right {
+        right: -300px;
+    }
+
+}
