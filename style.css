@@ -35,7 +35,15 @@ img {
     max-width: 100%;
     display: block;
 }
+@media (min-width: 1001px) {
 
+    #home .hero-text h1 {
+        white-space: nowrap;
+        font-size: clamp(44px, 5vw, 72px);
+        letter-spacing: -2.5px;
+    }
+
+}
 button,
 a {
     -webkit-tap-highlight-color: transparent;
