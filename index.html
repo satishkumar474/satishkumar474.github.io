@@ -19,6 +19,15 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D572S16L07"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D572S16L07');
+    </script>
+
 </head>
 
 
@@ -1854,7 +1863,63 @@
 
 </footer>
 
+<!-- ================= GOOGLE ANALYTICS EVENTS ================= -->
+<script>
+(function () {
+    if (typeof gtag !== 'function') return;
 
+    const trackedSections = [
+        'services',
+        'projects',
+        'trading-automation',
+        'case-studies',
+        'experience',
+        'contact'
+    ];
+
+    const seenSections = new Set();
+
+    const sectionObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (!entry.isIntersecting || seenSections.has(entry.target.id)) return;
+
+            seenSections.add(entry.target.id);
+            gtag('event', 'section_view', {
+                section_name: entry.target.id
+            });
+        });
+    }, { threshold: 0.35 });
+
+    trackedSections.forEach(function (id) {
+        const section = document.getElementById(id);
+        if (section) sectionObserver.observe(section);
+    });
+
+    document.addEventListener('click', function (event) {
+        const link = event.target.closest('a');
+        if (!link) return;
+
+        const href = link.getAttribute('href') || '';
+        const text = (link.textContent || '').trim().replace(/\s+/g, ' ');
+        let eventName = null;
+
+        if (href === '#services') eventName = 'explore_services_click';
+        else if (href === '#projects') eventName = 'projects_nav_click';
+        else if (href === '#trading-automation') eventName = 'trading_nav_click';
+        else if (href === '#case-studies') eventName = 'case_studies_click';
+        else if (href === '#contact') eventName = 'discuss_project_click';
+        else if (href.startsWith('mailto:')) eventName = 'email_click';
+        else if (href.includes('linkedin.com')) eventName = 'linkedin_click';
+
+        if (eventName) {
+            gtag('event', eventName, {
+                link_text: text,
+                link_url: href
+            });
+        }
+    });
+})();
+</script>
 
 </body>
 
