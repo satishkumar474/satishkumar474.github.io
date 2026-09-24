@@ -8,6 +8,10 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
+    <meta name="theme-color" content="#080d16">
+
+    <meta name="author" content="Satish Kumar GN">
+
     <title>Satish Kumar | ERP & Technology Solutions</title>
 
     <meta name="description"
@@ -15,10 +19,23 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D572S16L07"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D572S16L07');
+    </script>
+
 </head>
 
 
 <body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<main id="main-content">
 
 
 <!-- ================= NAVIGATION ================= -->
@@ -39,7 +56,6 @@
 <a href="#services">Services</a>
 <a href="#projects">Projects</a>
 <a href="#trading-automation">Trading</a>
-<a href="#case-studies">Case Studies</a>
 <a href="#experience">Experience</a>
 <a href="#contact">Contact</a>
 
@@ -52,151 +68,143 @@
 
 
 <!-- ================= HERO ================= -->
-<section id="home" class="hero">
 
-    <!-- Subtle background elements -->
-    <div class="hero-grid"></div>
-    <div class="hero-glow hero-glow-one"></div>
-    <div class="hero-glow hero-glow-two"></div>
+<section id="home" class="hero">
 
     <div class="container hero-content">
 
+
         <div class="hero-text">
 
-            <!-- Small professional label -->
-            <div class="hero-eyebrow">
-                <span class="hero-status"></span>
+
+            <p class="subtitle">
                 ERP • INTEGRATION • AUTOMATION • TECHNOLOGY
-            </div>
+            </p>
+
 
             <h1>
-                Satish Kumar G N
+                Satish Kumar GN
             </h1>
+
 
             <h2>
                 Building Practical Technology Solutions
                 <span>for Real Business Problems.</span>
             </h2>
 
+
             <p class="hero-description">
+
                 ERP professional with experience in implementation,
                 administration, integration, automation, analytics
                 and technology solutions.
-            </p>
 
-            <p class="hero-description hero-description-secondary">
                 I also work on selected independent technology projects
                 to help organizations solve specific business and
                 operational challenges.
+
             </p>
 
-            <!-- CTA buttons -->
+
             <div class="hero-buttons">
 
-                <a href="#services" class="btn primary">
+
+                <a href="#services"
+                   class="btn primary">
+
                     Explore Services
-                    <span>→</span>
+
                 </a>
 
-                <a href="#contact" class="btn secondary">
+
+                <a href="#contact"
+                   class="btn secondary">
+
                     Discuss a Project
-                    <span>↗</span>
+
                 </a>
+
 
             </div>
 
 
-            <!-- Professional positioning -->
             <div class="hero-role">
 
-                <div class="hero-role-item">
-                    <strong>ERP</strong>
-                    <span>Professional</span>
-                </div>
+                <span>ERP Professional</span>
 
-                <div class="hero-role-divider"></div>
-
-                <div class="hero-role-item">
-                    <strong>Technology</strong>
-                    <span>Solutions</span>
-                </div>
-
-                <div class="hero-role-divider"></div>
-
-                <div class="hero-role-item">
-                    <strong>Automation</strong>
-                    <span>&amp; Integration</span>
-                </div>
+                <span>Independent Technology Solutions</span>
 
             </div>
+
 
         </div>
 
 
-        <!-- Right-side technology visual -->
-        <div class="hero-visual">
+        <!-- HERO TECHNOLOGY ORBIT -->
+        <div class="hero-visual" aria-hidden="true">
 
-            <div class="hero-orbit orbit-one"></div>
-            <div class="hero-orbit orbit-two"></div>
+            <div class="hero-orbit hero-orbit-outer"></div>
+            <div class="hero-orbit hero-orbit-middle"></div>
+            <div class="hero-orbit hero-orbit-inner"></div>
 
-            <div class="hero-core">
+            <div class="hero-connection hero-connection-1"></div>
+            <div class="hero-connection hero-connection-2"></div>
+            <div class="hero-connection hero-connection-3"></div>
+            <div class="hero-connection hero-connection-4"></div>
 
-                <div class="hero-core-icon">
-                    SK
-                </div>
+            <div class="hero-particle hero-particle-1"></div>
+            <div class="hero-particle hero-particle-2"></div>
+            <div class="hero-particle hero-particle-3"></div>
+            <div class="hero-particle hero-particle-4"></div>
 
-                <div class="hero-core-title">
-                    Technology
-                </div>
-
-                <div class="hero-core-subtitle">
-                    Solutions
-                </div>
-
+            <div class="hero-center">
+                <strong>SK</strong>
+                <span>Technology</span>
+                <small>Solutions</small>
             </div>
 
-
-            <!-- Floating technology cards -->
-
-            <div class="hero-float-card hero-float-one">
-                <span class="float-number">01</span>
+            <div class="hero-node hero-node-erp">
+                <b>01</b>
                 <div>
                     <strong>ERP</strong>
-                    <small>Enterprise Systems</small>
+                    <span>Enterprise Systems</span>
                 </div>
             </div>
 
-            <div class="hero-float-card hero-float-two">
-                <span class="float-number">02</span>
+            <div class="hero-node hero-node-integration">
+                <b>02</b>
                 <div>
                     <strong>Integration</strong>
-                    <small>Connected Systems</small>
+                    <span>Connected Systems</span>
                 </div>
             </div>
 
-            <div class="hero-float-card hero-float-three">
-                <span class="float-number">03</span>
+            <div class="hero-node hero-node-automation">
+                <b>03</b>
                 <div>
                     <strong>Automation</strong>
-                    <small>Smart Workflows</small>
+                    <span>Smart Workflows</span>
                 </div>
             </div>
 
-            <div class="hero-float-card hero-float-four">
-                <span class="float-number">04</span>
+            <div class="hero-node hero-node-analytics">
+                <b>04</b>
                 <div>
                     <strong>Analytics</strong>
-                    <small>Data Solutions</small>
+                    <span>Data Solutions</span>
                 </div>
             </div>
 
         </div>
+
 
     </div>
 
 </section>
-<!-- ================= END HERO ================= -->
 
+
+
+<!-- ================= ABOUT ================= -->
 
 <section id="about"
          class="section">
@@ -315,6 +323,8 @@
 </section>
 
 
+
+<!-- ================= SERVICES ================= -->
 <section id="services" class="section alternate">
 
     <div class="container">
@@ -334,7 +344,7 @@
         <div class="services-grid">
 
             <!-- Service 1 -->
-            <div class="service-card" data-number="01">
+            <div class="service-card">
                 <div class="service-number">01</div>
 
                 <h3>ERP Implementation &amp; Administration</h3>
@@ -354,7 +364,7 @@
 
 
             <!-- Service 2 -->
-            <div class="service-card" data-number="02">
+            <div class="service-card">
                 <div class="service-number">02</div>
 
                 <h3>System Integration</h3>
@@ -374,7 +384,7 @@
 
 
             <!-- Service 3 -->
-           <div class="service-card" data-number="03">
+            <div class="service-card">
                 <div class="service-number">03</div>
 
                 <h3>Business Process Automation</h3>
@@ -394,7 +404,7 @@
 
 
             <!-- Service 4 -->
-            <div class="service-card" data-number="04">
+            <div class="service-card">
                 <div class="service-number">04</div>
 
                 <h3>Custom In-House Products</h3>
@@ -414,7 +424,7 @@
 
 
             <!-- Service 5 -->
-           <div class="service-card" data-number="05">
+            <div class="service-card">
                 <div class="service-number">05</div>
 
                 <h3>Analytics &amp; Dashboards</h3>
@@ -434,7 +444,7 @@
 
 
             <!-- Service 6 -->
-            <div class="service-card" data-number="06">
+            <div class="service-card">
                 <div class="service-number">06</div>
 
                 <h3>AI &amp; Emerging Technology</h3>
@@ -454,7 +464,7 @@
 
 
             <!-- Service 7 -->
-            <div class="service-card" data-number="07">
+            <div class="service-card">
                 <div class="service-number">07</div>
 
                 <h3>Algorithmic Trading &amp; Market Automation</h3>
@@ -482,101 +492,50 @@
     <!-- END container -->
 
 </section>
+<!-- ================= END SERVICES ================= -->
 
 
 <!-- ================= PROJECTS ================= -->
-<section id="projects" class="section projects-premium">
+<section id="projects" class="section">
 
-    <!-- Background visual -->
-    <div class="projects-bg-grid"></div>
+    <div class="container">
 
-    <div class="projects-bg-glow projects-glow-left"></div>
-    <div class="projects-bg-glow projects-glow-right"></div>
+        <div class="section-header">
+            <span class="section-label">PROJECTS</span>
 
-    <div class="projects-orbit projects-orbit-left"></div>
-    <div class="projects-orbit projects-orbit-right"></div>
+            <h2>Technology Projects &amp; Solutions</h2>
 
-    <div class="container projects-container">
-
-        <!-- PROJECT HEADER -->
-        <div class="projects-header">
-
-            <div class="projects-header-main">
-
-                <span class="section-label">
-                    PROJECTS
-                </span>
-
-                <h2>
-                    Technology Projects
-                    <span>&amp; Solutions.</span>
-                </h2>
-
-                <p>
-                    A selection of technology initiatives covering enterprise
-                    systems, algorithmic automation and system integration,
-                    focused on solving practical business and operational needs.
-                </p>
-
-            </div>
-
-
-            <div class="projects-header-side">
-
-                <span>
-                    IDEAS → SOLUTIONS → TECHNOLOGY
-                </span>
-
-                <div class="projects-header-line"></div>
-
-                <p>
-                    Turning business requirements into
-                    practical technology solutions.
-                </p>
-
-            </div>
-
+            <p>
+                A selection of technology initiatives covering enterprise
+                systems, algorithmic automation and system integration,
+                focused on solving practical business and operational needs.
+            </p>
         </div>
 
 
-        <!-- PROJECT CARDS -->
-        <div class="projects-premium-grid">
+        <div class="projects-grid">
 
 
-            <!-- =====================================================
-                 PROJECT 01
-                 ===================================================== -->
+            <!-- =================================================
+                 PROJECT 01 - ERP & ENTERPRISE SOLUTIONS
+                 ================================================= -->
 
-            <article class="project-premium-card project-enterprise">
+            <div class="project-card">
 
-                <div class="project-card-top">
+                <div class="project-top">
 
-                    <div class="project-icon">
-                        ERP
-                    </div>
+                    <span class="project-number">01</span>
 
-                    <div class="project-card-meta">
-
-                        <span class="project-card-number">
-                            01
-                        </span>
-
-                        <span class="project-card-category">
-                            ENTERPRISE SOLUTIONS
-                        </span>
-
-                    </div>
+                    <span class="project-type">
+                        ERP &amp; Enterprise
+                    </span>
 
                 </div>
 
 
-                <h3>
-                    ERP &amp; Enterprise
-                    Solutions
-                </h3>
+                <h3>ERP &amp; Enterprise Solutions</h3>
 
-
-                <p class="project-premium-description">
+                <p>
                     Enterprise technology solutions covering ERP
                     implementation, administration, process improvement,
                     analytics and custom applications for operational
@@ -584,404 +543,306 @@
                 </p>
 
 
-                <div class="project-module-list">
+                <div class="project-subprojects">
 
-                    <div class="project-module">
+                    <div class="project-subproject">
 
                         <span>01</span>
 
-                        <div>
-                            <strong>
-                                ERP Implementation &amp; Administration
-                            </strong>
+                        <strong>ERP Implementation &amp; Administration</strong>
 
-                            <small>
-                                Implementation, configuration, administration,
-                                support and continuous improvement.
-                            </small>
-                        </div>
+                        <small>
+                            Implementation, configuration, administration,
+                            support and continuous improvement.
+                        </small>
 
                     </div>
 
 
-                    <div class="project-module">
+                    <div class="project-subproject">
 
                         <span>02</span>
 
-                        <div>
-                            <strong>
-                                Attendance Analytics Platform
-                            </strong>
+                        <strong>Attendance Analytics Platform</strong>
 
-                            <small>
-                                Attendance processing, dashboards, reporting
-                                and drill-down analytics.
-                            </small>
-                        </div>
+                        <small>
+                            Attendance processing, dashboards, reporting and
+                            drill-down analytics.
+                        </small>
 
                     </div>
 
 
-                    <div class="project-module">
+                    <div class="project-subproject">
 
                         <span>03</span>
 
-                        <div>
-                            <strong>
-                                Custom In-House Applications
-                            </strong>
+                        <strong>Custom In-House Applications</strong>
 
-                            <small>
-                                Focused applications built around specific
-                                organizational processes and requirements.
-                            </small>
-                        </div>
+                        <small>
+                            Focused applications built around specific
+                            organizational processes and requirements.
+                        </small>
 
                     </div>
 
 
-                    <div class="project-module">
+                    <div class="project-subproject">
 
                         <span>04</span>
 
-                        <div>
-                            <strong>
-                                Business Process Solutions
-                            </strong>
+                        <strong>Business Process Solutions</strong>
 
-                            <small>
-                                Workflow improvement, automation and
-                                technology-driven operational solutions.
-                            </small>
-                        </div>
+                        <small>
+                            Workflow improvement, automation and
+                            technology-driven operational solutions.
+                        </small>
 
                     </div>
 
                 </div>
 
 
-                <div class="project-premium-tags">
+                <div class="project-tags">
 
                     <span>ERP</span>
-                    <span>Administration</span>
+                    <span>Implementation</span>
                     <span>Analytics</span>
-                    <span>Web Apps</span>
+                    <span>Custom Applications</span>
 
                 </div>
 
 
-                <a href="#case-studies" class="project-premium-link">
-                    Explore Projects
-                    <span>→</span>
+                <a href="#case-studies" class="project-link">
+                    Explore Projects <span>→</span>
                 </a>
 
-
-                <div class="project-watermark">
-                    01
-                </div>
-
-            </article>
+            </div>
 
 
 
-            <!-- =====================================================
-                 PROJECT 02 - TRADING
-                 ===================================================== -->
+            <!-- =================================================
+                 PROJECT 02 - ALGORITHMIC TRADING
+                 ================================================= -->
 
-            <article class="project-premium-card project-trading">
+            <div class="project-card">
 
-                <div class="project-card-top">
+                <div class="project-top">
 
-                    <div class="project-icon">
-                        ALGO
-                    </div>
+                    <span class="project-number">02</span>
 
-                    <div class="project-card-meta">
-
-                        <span class="project-card-number">
-                            02
-                        </span>
-
-                        <span class="project-card-category">
-                            ALGORITHMIC TRADING
-                        </span>
-
-                    </div>
+                    <span class="project-type">
+                        Algorithmic Trading
+                    </span>
 
                 </div>
 
 
-                <h3>
-                    Algorithmic Trading
-                    System
-                </h3>
+                <h3>Algorithmic Trading System</h3>
 
-
-                <p class="project-premium-description">
+                <p>
                     Automated trading technology designed around market
                     analysis, strategy execution, risk management and
                     end-to-end position management.
                 </p>
 
 
-                <div class="project-module-list">
+                <div class="project-subprojects">
 
-                    <div class="project-module">
+                    <div class="project-subproject">
 
                         <span>01</span>
 
-                        <div>
-                            <strong>
-                                NSE &amp; Options Automation
-                            </strong>
+                        <strong>NSE &amp; Options Automation</strong>
 
-                            <small>
-                                Market analysis, option-chain processing,
-                                signals and systematic execution.
-                            </small>
-                        </div>
+                        <small>
+                            Market analysis, option-chain processing,
+                            signals and systematic execution.
+                        </small>
 
                     </div>
 
 
-                    <div class="project-module">
+                    <div class="project-subproject">
 
                         <span>02</span>
 
-                        <div>
-                            <strong>
-                                Forex Trading Automation
-                            </strong>
+                        <strong>Forex Trading Automation</strong>
 
-                            <small>
-                                Market-data processing, strategy execution
-                                and automated position management.
-                            </small>
-                        </div>
+                        <small>
+                            Market-data processing, strategy execution and
+                            automated position management.
+                        </small>
 
                     </div>
 
 
-                    <div class="project-module">
+                    <div class="project-subproject">
 
                         <span>03</span>
 
-                        <div>
-                            <strong>
-                                Strategy Engine
-                            </strong>
+                        <strong>Strategy Engine</strong>
 
-                            <small>
-                                Custom strategy rules, indicators, signals,
-                                entries and exits.
-                            </small>
-
-                        </div>
+                        <small>
+                            Custom strategy rules, indicators, signals,
+                            entries and exits.
+                        </small>
 
                     </div>
 
 
-                    <div class="project-module">
+                    <div class="project-subproject">
 
                         <span>04</span>
 
-                        <div>
-                            <strong>
-                                Risk &amp; Position Management
-                            </strong>
+                        <strong>Risk &amp; Position Management</strong>
 
-                            <small>
-                                Risk/reward, position sizing, stop-loss,
-                                trailing logic and trade controls.
-                            </small>
-                        </div>
+                        <small>
+                            Risk/reward, position sizing, stop-loss,
+                            trailing logic and trade controls.
+                        </small>
 
                     </div>
 
 
-                    <div class="project-module">
+                    <div class="project-subproject">
 
                         <span>05</span>
 
-                        <div>
-                            <strong>
-                                End-to-End Automation
-                            </strong>
+                        <strong>End-to-End Automation</strong>
 
-                            <small>
-                                Market data → analysis → signal →
-                                risk validation → execution →
-                                position management → exit.
-                            </small>
-                        </div>
+                        <small>
+                            Market data → analysis → signal → risk validation
+                            → execution → position management → exit.
+                        </small>
 
                     </div>
 
                 </div>
 
 
-                <div class="project-premium-tags">
+                <div class="project-tags">
 
                     <span>NSE</span>
                     <span>Options</span>
                     <span>Forex</span>
-                    <span>Automation</span>
+                    <span>Algo Trading</span>
                     <span>Risk Management</span>
 
                 </div>
 
 
-                <a href="#trading-automation" class="project-premium-link">
-                    Explore Trading Automation
-                    <span>→</span>
+                <a href="#trading-automation" class="project-link">
+                    Explore Trading Automation <span>→</span>
                 </a>
 
-
-                <div class="project-watermark">
-                    02
-                </div>
-
-            </article>
+            </div>
 
 
 
-            <!-- =====================================================
-                 PROJECT 03 - INTEGRATION
-                 ===================================================== -->
+            <!-- =================================================
+                 PROJECT 03 - INTEGRATION & MIDDLEWARE
+                 ================================================= -->
 
-            <article class="project-premium-card project-integration">
+            <div class="project-card">
 
-                <div class="project-card-top">
+                <div class="project-top">
 
-                    <div class="project-icon">
-                        API
-                    </div>
+                    <span class="project-number">03</span>
 
-                    <div class="project-card-meta">
-
-                        <span class="project-card-number">
-                            03
-                        </span>
-
-                        <span class="project-card-category">
-                            INTEGRATION &amp; MIDDLEWARE
-                        </span>
-
-                    </div>
+                    <span class="project-type">
+                        Integration
+                    </span>
 
                 </div>
 
 
-                <h3>
-                    Integration &amp;
-                    Middleware
-                </h3>
+                <h3>Integration &amp; Middleware</h3>
 
-
-                <p class="project-premium-description">
+                <p>
                     Connecting enterprise applications and external systems
                     through APIs, middleware and automated workflows to
                     enable reliable data exchange and business processes.
                 </p>
 
 
-                <div class="project-module-list">
+                <div class="project-subprojects">
 
-                    <div class="project-module">
+                    <div class="project-subproject">
 
                         <span>01</span>
 
-                        <div>
-                            <strong>
-                                API Integration
-                            </strong>
+                        <strong>API Integration</strong>
 
-                            <small>
-                                REST APIs, authentication, request processing,
-                                responses and error handling.
-                            </small>
-                        </div>
+                        <small>
+                            REST APIs, authentication, request processing,
+                            responses and error handling.
+                        </small>
 
                     </div>
 
 
-                    <div class="project-module">
+                    <div class="project-subproject">
 
                         <span>02</span>
 
-                        <div>
-                            <strong>
-                                Middleware Solutions
-                            </strong>
+                        <strong>Middleware Solutions</strong>
 
-                            <small>
-                                Data transformation, business rules, scheduled
-                                processing and system communication.
-                            </small>
-                        </div>
+                        <small>
+                            Data transformation, business rules, scheduled
+                            processing and system communication.
+                        </small>
 
                     </div>
 
 
-                    <div class="project-module">
+                    <div class="project-subproject">
 
                         <span>03</span>
 
-                        <div>
-                            <strong>
-                                Enterprise System Integration
-                            </strong>
+                        <strong>Enterprise System Integration</strong>
 
-                            <small>
-                                Connecting ERP platforms, applications and
-                                external systems.
-                            </small>
-                        </div>
+                        <small>
+                            Connecting ERP platforms, applications and
+                            external systems.
+                        </small>
 
                     </div>
 
 
-                    <div class="project-module">
+                    <div class="project-subproject">
 
                         <span>04</span>
 
-                        <div>
-                            <strong>
-                                Notification Integration
-                            </strong>
+                        <strong>Notification Integration</strong>
 
-                            <small>
-                                Automated communication and event-driven
-                                notification workflows.
-                            </small>
-                        </div>
+                        <small>
+                            Automated communication and event-driven
+                            notification workflows.
+                        </small>
 
                     </div>
 
 
-                    <div class="project-module">
+                    <div class="project-subproject">
 
                         <span>05</span>
 
-                        <div>
-                            <strong>
-                                Automated Data Workflows
-                            </strong>
+                        <strong>Automated Data Workflows</strong>
 
-                            <small>
-                                Synchronization, validation, status processing
-                                and exception handling.
-                            </small>
-                        </div>
+                        <small>
+                            Synchronization, validation, status processing
+                            and exception handling.
+                        </small>
 
                     </div>
 
                 </div>
 
 
-                <div class="project-premium-tags">
+                <div class="project-tags">
 
-                    <span>APIs</span>
+                    <span>API</span>
                     <span>Middleware</span>
                     <span>Integration</span>
                     <span>Automation</span>
@@ -989,17 +850,11 @@
                 </div>
 
 
-                <a href="#case-studies" class="project-premium-link">
-                    Explore Integration Projects
-                    <span>→</span>
+                <a href="#case-studies" class="project-link">
+                    Explore Integration Projects <span>→</span>
                 </a>
 
-
-                <div class="project-watermark">
-                    03
-                </div>
-
-            </article>
+            </div>
 
         </div>
 
@@ -1008,7 +863,7 @@
 </section>
 <!-- ================= END PROJECTS ================= -->
 
-
+    <!-- ================= TRADING AUTOMATION ================= -->
 <section id="trading-automation" class="section alternate">
   <div class="container">
 
@@ -1282,247 +1137,9 @@
 
   </div>
 </section>
+<!-- ================= END TRADING AUTOMATION ================= -->
 
-
-<section id="case-studies" class="section">
-
-    <div class="container">
-
-        <div class="section-header">
-            <span class="section-label">CASE STUDIES</span>
-
-            <h2>From Business Challenge to Practical Solution</h2>
-
-            <p>
-                A closer look at how I approach technology projects —
-                understanding the requirement, designing the solution,
-                implementing the technology and continuously improving it.
-            </p>
-        </div>
-
-
-        <div class="case-studies-grid">
-
-            <!-- Case Study 01 -->
-            <article class="case-study-card">
-
-                <div class="case-study-header">
-                    <span class="case-study-number">01</span>
-                    <span class="case-study-category">ERP &amp; Enterprise</span>
-                </div>
-
-                <h3>ERP Implementation &amp; Administration</h3>
-
-                <div class="case-study-block">
-                    <span>CHALLENGE</span>
-
-                    <p>
-                        Organizations need enterprise systems to support
-                        business processes while maintaining reliable
-                        configuration, administration, reporting and
-                        continuous improvements.
-                    </p>
-                </div>
-
-                <div class="case-study-block">
-                    <span>SOLUTION</span>
-
-                    <p>
-                        Work across ERP implementation, administration,
-                        process configuration, support, reporting and
-                        technology-driven process improvements.
-                    </p>
-                </div>
-
-                <div class="case-study-tech">
-                    <span>ERP</span>
-                    <span>Implementation</span>
-                    <span>Administration</span>
-                    <span>Process Improvement</span>
-                </div>
-
-            </article>
-
-
-            <!-- Case Study 02 -->
-            <article class="case-study-card">
-
-                <div class="case-study-header">
-                    <span class="case-study-number">02</span>
-                    <span class="case-study-category">Analytics</span>
-                </div>
-
-                <h3>Attendance Analytics Platform</h3>
-
-                <div class="case-study-block">
-                    <span>CHALLENGE</span>
-
-                    <p>
-                        Large volumes of attendance records need to be
-                        converted into useful information for different
-                        levels of academic and operational analysis.
-                    </p>
-                </div>
-
-                <div class="case-study-block">
-                    <span>SOLUTION</span>
-
-                    <p>
-                        Developed a dashboard-driven approach with
-                        drill-down analysis across degree, department,
-                        program, semester, course and student levels.
-                    </p>
-                </div>
-
-                <div class="case-study-tech">
-                    <span>Java</span>
-                    <span>Spring Boot</span>
-                    <span>MySQL</span>
-                    <span>Dashboard</span>
-                </div>
-
-            </article>
-
-
-            <!-- Case Study 03 -->
-            <article class="case-study-card">
-
-                <div class="case-study-header">
-                    <span class="case-study-number">03</span>
-                    <span class="case-study-category">Integration</span>
-                </div>
-
-                <h3>Enterprise System Integration</h3>
-
-                <div class="case-study-block">
-                    <span>CHALLENGE</span>
-
-                    <p>
-                        Different business systems often maintain separate
-                        data and workflows, creating a need for reliable
-                        communication between applications.
-                    </p>
-                </div>
-
-                <div class="case-study-block">
-                    <span>SOLUTION</span>
-
-                    <p>
-                        Design integration workflows that connect systems
-                        through APIs and middleware while supporting
-                        automated data exchange and business processes.
-                    </p>
-                </div>
-
-                <div class="case-study-tech">
-                    <span>APIs</span>
-                    <span>Integration</span>
-                    <span>Middleware</span>
-                    <span>Automation</span>
-                </div>
-
-            </article>
-
-
-            <!-- Case Study 04 -->
-            <article class="case-study-card">
-
-                <div class="case-study-header">
-                    <span class="case-study-number">04</span>
-                    <span class="case-study-category">Technology</span>
-                </div>
-
-                <h3>Algorithmic Trading System</h3>
-
-                <div class="case-study-block">
-                    <span>CHALLENGE</span>
-
-                    <p>
-                        Automated trading systems require market-data
-                        processing, strategy logic, risk controls and
-                        reliable execution workflows.
-                    </p>
-                </div>
-
-                <div class="case-study-block">
-                    <span>SOLUTION</span>
-
-                    <p>
-                        Develop and refine automated strategy components
-                        covering market analysis, signal generation,
-                        position management, trailing logic and execution.
-                    </p>
-                </div>
-
-                <div class="case-study-tech">
-                    <span>Java</span>
-                    <span>MQL5</span>
-                    <span>Market Data</span>
-                    <span>Automation</span>
-                </div>
-
-            </article>
-
-        </div>
-
-
-        <!-- Project Approach -->
-
-        <div class="case-study-approach">
-
-            <div class="case-study-approach-title">
-                <span class="section-label">MY APPROACH</span>
-
-                <h3>How I Work on Technology Problems</h3>
-            </div>
-
-            <div class="approach-steps">
-
-                <div class="approach-step">
-                    <span>01</span>
-                    <h4>Understand</h4>
-                    <p>
-                        Understand the business requirement,
-                        process and actual problem.
-                    </p>
-                </div>
-
-                <div class="approach-step">
-                    <span>02</span>
-                    <h4>Design</h4>
-                    <p>
-                        Translate the requirement into a practical
-                        technical solution.
-                    </p>
-                </div>
-
-                <div class="approach-step">
-                    <span>03</span>
-                    <h4>Build</h4>
-                    <p>
-                        Implement, integrate and validate the
-                        solution against the requirement.
-                    </p>
-                </div>
-
-                <div class="approach-step">
-                    <span>04</span>
-                    <h4>Improve</h4>
-                    <p>
-                        Monitor the solution and identify opportunities
-                        for further improvement and automation.
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
+<!-- ================= EXPERIENCE ================= -->
 <section id="experience" class="section alternate">
 
     <div class="container">
@@ -1775,7 +1392,7 @@
             <div class="independent-work-content">
 
                 <span class="section-label">
-                    INDEPENDENT TECHNOLOGY &amp; TRADING
+                    INDEPENDENT TECHNOLOGY WORK
                 </span>
 
                 <h3>Building Solutions Beyond the Day-to-Day Role</h3>
@@ -1783,10 +1400,7 @@
                 <p>
                     Selected technology projects focused on practical business
                     requirements, system integration, automation, analytics,
-                    custom solutions, emerging technologies and algorithmic
-                    trading. Alongside technology work, I bring 10+ years of
-                    hands-on options trading experience and have developed my
-                    own algorithmic trading system.
+                    custom solutions and emerging technologies.
                 </p>
 
             </div>
@@ -1813,9 +1427,242 @@
                     <strong>Analytics &amp; AI</strong>
                 </div>
 
-                <div class="work-area">
-                    <span>05</span>
-                    <strong>Trading &amp; Algo Development</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= CASE STUDIES ================= -->
+<section id="case-studies" class="section">
+
+    <div class="container">
+
+        <div class="section-header">
+            <span class="section-label">CASE STUDIES</span>
+
+            <h2>From Business Challenge to Practical Solution</h2>
+
+            <p>
+                A closer look at how I approach technology projects —
+                understanding the requirement, designing the solution,
+                implementing the technology and continuously improving it.
+            </p>
+        </div>
+
+
+        <div class="case-studies-grid">
+
+            <!-- Case Study 01 -->
+            <article class="case-study-card">
+
+                <div class="case-study-header">
+                    <span class="case-study-number">01</span>
+                    <span class="case-study-category">ERP &amp; Enterprise</span>
+                </div>
+
+                <h3>ERP Implementation &amp; Administration</h3>
+
+                <div class="case-study-block">
+                    <span>CHALLENGE</span>
+
+                    <p>
+                        Organizations need enterprise systems to support
+                        business processes while maintaining reliable
+                        configuration, administration, reporting and
+                        continuous improvements.
+                    </p>
+                </div>
+
+                <div class="case-study-block">
+                    <span>SOLUTION</span>
+
+                    <p>
+                        Work across ERP implementation, administration,
+                        process configuration, support, reporting and
+                        technology-driven process improvements.
+                    </p>
+                </div>
+
+                <div class="case-study-tech">
+                    <span>ERP</span>
+                    <span>Implementation</span>
+                    <span>Administration</span>
+                    <span>Process Improvement</span>
+                </div>
+
+            </article>
+
+
+            <!-- Case Study 02 -->
+            <article class="case-study-card">
+
+                <div class="case-study-header">
+                    <span class="case-study-number">02</span>
+                    <span class="case-study-category">Analytics</span>
+                </div>
+
+                <h3>Attendance Analytics Platform</h3>
+
+                <div class="case-study-block">
+                    <span>CHALLENGE</span>
+
+                    <p>
+                        Large volumes of attendance records need to be
+                        converted into useful information for different
+                        levels of academic and operational analysis.
+                    </p>
+                </div>
+
+                <div class="case-study-block">
+                    <span>SOLUTION</span>
+
+                    <p>
+                        Developed a dashboard-driven approach with
+                        drill-down analysis across degree, department,
+                        program, semester, course and student levels.
+                    </p>
+                </div>
+
+                <div class="case-study-tech">
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>MySQL</span>
+                    <span>Dashboard</span>
+                </div>
+
+            </article>
+
+
+            <!-- Case Study 03 -->
+            <article class="case-study-card">
+
+                <div class="case-study-header">
+                    <span class="case-study-number">03</span>
+                    <span class="case-study-category">Integration</span>
+                </div>
+
+                <h3>Enterprise System Integration</h3>
+
+                <div class="case-study-block">
+                    <span>CHALLENGE</span>
+
+                    <p>
+                        Different business systems often maintain separate
+                        data and workflows, creating a need for reliable
+                        communication between applications.
+                    </p>
+                </div>
+
+                <div class="case-study-block">
+                    <span>SOLUTION</span>
+
+                    <p>
+                        Design integration workflows that connect systems
+                        through APIs and middleware while supporting
+                        automated data exchange and business processes.
+                    </p>
+                </div>
+
+                <div class="case-study-tech">
+                    <span>APIs</span>
+                    <span>Integration</span>
+                    <span>Middleware</span>
+                    <span>Automation</span>
+                </div>
+
+            </article>
+
+
+            <!-- Case Study 04 -->
+            <article class="case-study-card">
+
+                <div class="case-study-header">
+                    <span class="case-study-number">04</span>
+                    <span class="case-study-category">Technology</span>
+                </div>
+
+                <h3>Algorithmic Trading System</h3>
+
+                <div class="case-study-block">
+                    <span>CHALLENGE</span>
+
+                    <p>
+                        Automated trading systems require market-data
+                        processing, strategy logic, risk controls and
+                        reliable execution workflows.
+                    </p>
+                </div>
+
+                <div class="case-study-block">
+                    <span>SOLUTION</span>
+
+                    <p>
+                        Develop and refine automated strategy components
+                        covering market analysis, signal generation,
+                        position management, trailing logic and execution.
+                    </p>
+                </div>
+
+                <div class="case-study-tech">
+                    <span>Java</span>
+                    <span>MQL5</span>
+                    <span>Market Data</span>
+                    <span>Automation</span>
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- Project Approach -->
+
+        <div class="case-study-approach">
+
+            <div class="case-study-approach-title">
+                <span class="section-label">MY APPROACH</span>
+
+                <h3>How I Work on Technology Problems</h3>
+            </div>
+
+            <div class="approach-steps">
+
+                <div class="approach-step">
+                    <span>01</span>
+                    <h4>Understand</h4>
+                    <p>
+                        Understand the business requirement,
+                        process and actual problem.
+                    </p>
+                </div>
+
+                <div class="approach-step">
+                    <span>02</span>
+                    <h4>Design</h4>
+                    <p>
+                        Translate the requirement into a practical
+                        technical solution.
+                    </p>
+                </div>
+
+                <div class="approach-step">
+                    <span>03</span>
+                    <h4>Build</h4>
+                    <p>
+                        Implement, integrate and validate the
+                        solution against the requirement.
+                    </p>
+                </div>
+
+                <div class="approach-step">
+                    <span>04</span>
+                    <h4>Improve</h4>
+                    <p>
+                        Monitor the solution and identify opportunities
+                        for further improvement and automation.
+                    </p>
                 </div>
 
             </div>
@@ -1827,14 +1674,16 @@
 </section>
 
 
-<section id="why-work-with-me" class="section alternate">
+<!-- ================= WHY WORK WITH ME ================= -->
+
+<section class="section alternate">
 
 
     <div class="container">
 
 
         <p class="section-label">
-            WHY WORK WITH ME
+            MY APPROACH
         </p>
 
 
@@ -1903,6 +1752,9 @@
 </section>
 
 
+
+<!-- ================= CONTACT ================= -->
+
 <section id="contact"
          class="section contact">
 
@@ -1943,6 +1795,7 @@
 
             <a href="https://www.linkedin.com/in/satish-kumar-gn474/"
                target="_blank"
+               rel="noopener noreferrer"
                class="btn secondary">
 
                 LinkedIn
@@ -1970,7 +1823,8 @@
                 <strong>LinkedIn</strong><br>
 
                 <a href="https://www.linkedin.com/in/satish-kumar-gn474/"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener noreferrer">
 
                     Connect with me on LinkedIn
 
@@ -1988,6 +1842,8 @@
 </section>
 
 
+
+</main>
 
 <!-- ================= FOOTER ================= -->
 
@@ -2007,7 +1863,63 @@
 
 </footer>
 
+<!-- ================= GOOGLE ANALYTICS EVENTS ================= -->
+<script>
+(function () {
+    if (typeof gtag !== 'function') return;
 
+    const trackedSections = [
+        'services',
+        'projects',
+        'trading-automation',
+        'case-studies',
+        'experience',
+        'contact'
+    ];
+
+    const seenSections = new Set();
+
+    const sectionObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (!entry.isIntersecting || seenSections.has(entry.target.id)) return;
+
+            seenSections.add(entry.target.id);
+            gtag('event', 'section_view', {
+                section_name: entry.target.id
+            });
+        });
+    }, { threshold: 0.35 });
+
+    trackedSections.forEach(function (id) {
+        const section = document.getElementById(id);
+        if (section) sectionObserver.observe(section);
+    });
+
+    document.addEventListener('click', function (event) {
+        const link = event.target.closest('a');
+        if (!link) return;
+
+        const href = link.getAttribute('href') || '';
+        const text = (link.textContent || '').trim().replace(/\s+/g, ' ');
+        let eventName = null;
+
+        if (href === '#services') eventName = 'explore_services_click';
+        else if (href === '#projects') eventName = 'projects_nav_click';
+        else if (href === '#trading-automation') eventName = 'trading_nav_click';
+        else if (href === '#case-studies') eventName = 'case_studies_click';
+        else if (href === '#contact') eventName = 'discuss_project_click';
+        else if (href.startsWith('mailto:')) eventName = 'email_click';
+        else if (href.includes('linkedin.com')) eventName = 'linkedin_click';
+
+        if (eventName) {
+            gtag('event', eventName, {
+                link_text: text,
+                link_url: href
+            });
+        }
+    });
+})();
+</script>
 
 </body>
 
